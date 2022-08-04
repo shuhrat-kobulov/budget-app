@@ -5,6 +5,6 @@ export class Invoice {
         this.amount = a;
     }
     format() {
-        return `${this.client} owes ${this.amount} for ${this.details}`;
+        return `${this.client} owes ${this.amount} $ for ${this.details}`;
     }
 }

@@ -1,7 +1,7 @@
 export class Invoice {
-  client: string;
-  details: string;
-  amount: number
+  readonly client: string;
+  private details: string;
+  public amount: number
 
   constructor(c: string, d: string, a: number) {
     this.client = c
@@ -10,6 +10,6 @@ export class Invoice {
   }
 
   format() {
-    return `${this.client} owes ${this.amount} for ${this.details}`
+    return `${this.client} owes ${this.amount} $ for ${this.details}`
   }
 }
