@@ -2,6 +2,8 @@ import { Invoice } from "./classes/invoice.js";
 import { Payment } from "./classes/payment.js";
 import { ListTemplate } from "./classes/list-template.js";
 
+enum BudgetType {'invoice' = 'invoice', 'payment' = 'payment'}
+
 // elements
 const elForm = document.getElementById('form') as HTMLFormElement;
 const type = document.getElementById('type') as HTMLSelectElement;
@@ -12,12 +14,13 @@ const ul = document.getElementById('list') as HTMLUListElement;
 
 const list = new ListTemplate(ul)
 
+
 const handleSubmit = (evt: Event) => {
   evt.preventDefault()
 
   let budget;
 
-  if (type.value === 'invoice') {
+  if (type.value === BudgetType.invoice) {
     budget = new Invoice(toFrom.value, details.value, amount.valueAsNumber)
   } else {
     budget = new Payment(toFrom.value, details.value, amount.valueAsNumber)
