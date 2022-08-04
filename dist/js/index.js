@@ -1,7 +1,5 @@
-"use strict";
-// form
+// elements
 const elForm = document.getElementById('form');
-// inputs
 const type = document.getElementById('#type');
 const toFrom = document.getElementById('#toFrom');
 const details = document.getElementById('#details');
@@ -11,3 +9,4 @@ const handleSubmit = (evt) => {
     console.log('submit');
 };
 elForm.addEventListener('submit', handleSubmit);
+export {};

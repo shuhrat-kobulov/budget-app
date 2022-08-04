@@ -1,7 +1,7 @@
-// form
-const elForm = document.getElementById('form') as HTMLFormElement;
+import { Invoice } from "./classes/invoice";
 
-// inputs
+// elements
+const elForm = document.getElementById('form') as HTMLFormElement;
 const type = document.getElementById('#type') as HTMLSelectElement;
 const toFrom = document.getElementById('#toFrom') as HTMLInputElement;
 const details = document.getElementById('#details') as HTMLInputElement;
